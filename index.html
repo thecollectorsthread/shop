@@ -20,7 +20,12 @@
         <h2>Welcome!</h2>
         <p>Discover exclusive jerseys curated for the true collector.</p>
       </section>
-      <!-- Product cards can be added here -->
+
+      <section class="shop-section">
+        <h2>Shop Jerseys</h2>
+        <div id="products" class="products-grid"></div>
+      </section>
+
       <section class="contact-section">
         <h2>Contact & Orders</h2>
         <p>All direct messages and order confirmations are handled on our Facebook page. Please message us for any inquiries or to confirm your order!</p>
@@ -33,5 +38,19 @@
   <footer>
     &copy; 2025 the collectors thread
   </footer>
+  <script src="products.js"></script>
+  <script>
+    const productsContainer = document.getElementById('products');
+    products.forEach(product => {
+      productsContainer.innerHTML += `
+        <div class="product-card">
+          <img src="${product.image}" alt="${product.name}">
+          <h3>${product.name}</h3>
+          <p class="price">${product.price}</p>
+          <a href="https://facebook.com/YOUR-FACEBOOK-PAGE" class="order-btn" target="_blank">Order on Facebook</a>
+        </div>
+      `;
+    });
+  </script>
 </body>
 </html>
