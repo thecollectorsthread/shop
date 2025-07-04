@@ -1,16 +1,17 @@
 :root {
-  --matte-black: #111111;
-  --matte-black-dark: #19191a;
-  --gold: #bfa14b;
-  --white: #fcfbf9;
-  --gray: #252525;
+  --black: #101014;
+  --black-dark: #18181b;
+  --gray: #232325;
+  --white: #f6f7fa;
+  --silver: #bfc2c7;
+  --blue-accent: #5493c7;
 }
 
 html, body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background: var(--matte-black);
+  background: var(--black);
   color: var(--white);
   font-family: 'Inter', Arial, sans-serif;
   letter-spacing: 0.01em;
@@ -23,8 +24,8 @@ html, body {
 }
 
 header {
-  background: var(--matte-black);
-  border-bottom: 2px solid var(--gold);
+  background: var(--black);
+  border-bottom: 2px solid var(--silver);
   padding-top: 2.5rem;
   padding-bottom: 2rem;
   text-align: center;
@@ -35,18 +36,18 @@ header {
   font-family: 'Playfair Display', serif;
   font-size: 2.6rem;
   font-weight: 700;
-  color: var(--gold);
+  color: var(--white);
   letter-spacing: 2px;
   text-shadow: none;
 }
 
 .tagline {
-  color: var(--white);
+  color: var(--silver);
   font-size: 1.08rem;
   font-style: italic;
   letter-spacing: 1px;
   margin: 0.4rem 0 0 0;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .shop-section {
@@ -55,13 +56,13 @@ header {
 }
 
 .shop-section h2 {
-  color: var(--gold);
+  color: var(--white);
   font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
   margin-bottom: 1.7rem;
   letter-spacing: 1px;
   text-align: left;
-  border-left: 4px solid var(--gold);
+  border-left: 4px solid var(--silver);
   padding-left: 0.7rem;
 }
 
@@ -73,7 +74,7 @@ header {
 }
 
 .product-card {
-  background: var(--matte-black-dark);
+  background: var(--black-dark);
   border-radius: 12px;
   box-shadow: none;
   border: 1.5px solid var(--gray);
@@ -87,7 +88,7 @@ header {
 }
 
 .product-card:hover {
-  border: 1.5px solid var(--gold);
+  border: 1.5px solid var(--silver);
   transform: translateY(-3px) scale(1.01);
 }
 
@@ -112,7 +113,7 @@ header {
 
 .price {
   font-size: 1.06rem;
-  color: var(--gold);
+  color: var(--silver);
   margin-bottom: 1.1rem;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -120,8 +121,8 @@ header {
 
 .order-btn {
   display: inline-block;
-  background: var(--gold);
-  color: var(--matte-black);
+  background: var(--silver);
+  color: var(--black);
   font-weight: bold;
   border: none;
   border-radius: 6px;
@@ -135,22 +136,22 @@ header {
 }
 
 .order-btn:hover {
-  background: #f7e49b;
-  color: var(--matte-black-dark);
+  background: var(--blue-accent);
+  color: var(--white);
 }
 
 .contact-section {
   margin: 2.5rem auto 0 auto;
   max-width: 420px;
-  background: var(--matte-black-dark);
+  background: var(--black-dark);
   border-radius: 10px;
-  border: 1.5px solid var(--gold);
+  border: 1.5px solid var(--silver);
   padding: 1.5rem 1.5rem 2rem 1.5rem;
   text-align: center;
 }
 
 .contact-section h2 {
-  color: var(--gold);
+  color: var(--white);
   font-family: 'Playfair Display', serif;
   font-size: 1.2rem;
   letter-spacing: 1px;
@@ -159,15 +160,15 @@ header {
 }
 
 .contact-section p {
-  color: #e5e5e5;
+  color: var(--silver);
   margin-bottom: 1.3rem;
   font-size: 1rem;
 }
 
 .fb-btn {
   display: inline-block;
-  background: var(--gold);
-  color: var(--matte-black);
+  background: var(--silver);
+  color: var(--black);
   font-size: 1.05rem;
   font-weight: 600;
   padding: 0.8rem 1.6rem;
@@ -182,17 +183,17 @@ header {
 }
 
 .fb-btn:hover {
-  background: #f7e49b;
-  color: var(--matte-black);
+  background: var(--blue-accent);
+  color: var(--white);
 }
 
 footer {
   text-align: center;
   padding: 1.3rem 0;
   font-size: 1rem;
-  color: #a99c7e;
-  background: var(--matte-black);
-  border-top: 2px solid var(--gold);
+  color: var(--silver);
+  background: var(--black);
+  border-top: 2px solid var(--silver);
   letter-spacing: 0.5px;
   z-index: 1;
   position: relative;
