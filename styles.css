@@ -4,9 +4,19 @@ body {
   color: #fafaf9;
   font-family: 'Segoe UI', 'Arial', sans-serif;
   background:
-    linear-gradient(135deg, #18181b 0%, #232325 100%), 
+    linear-gradient(135deg, #18181b 0%, #232325 100%),
     url('https://www.transparenttextures.com/patterns/black-linen.png');
   background-blend-mode: overlay;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(120deg, rgba(38, 38, 43, 0.8) 0%, rgba(24, 24, 27, 0.92) 100%);
+  z-index: 0;
 }
 
 header {
