@@ -47,3 +47,35 @@ button {
   color: #1a1a1a;
   cursor: pointer;
 }
+
+/* Contact Section */
+#contact {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+#contact h2 {
+  color: #f1ece3;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+#contact p {
+  color: #d0c9bf;
+  margin-bottom: 20px;
+}
+
+#contact button {
+  background-color: #f1ece3;
+  color: #1a1a1a;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#contact button:hover {
+  background-color: #e4d6c2;
+}
