@@ -50,32 +50,35 @@ button {
 
 /* Contact Section */
 #contact {
+  max-width: 400px;
+  margin: 40px auto 0 auto;
+  padding: 30px 20px;
+  background: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
   text-align: center;
-  padding: 40px 20px;
 }
 
 #contact h2 {
-  color: #f1ece3;
-  font-size: 1.8em;
   margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
 }
 
 #contact p {
-  color: #d0c9bf;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+  color: #333;
 }
 
 #contact button {
-  background-color: #f1ece3;
-  color: #1a1a1a;
+  background: #1877f2;
+  color: #fff;
+  padding: 12px 28px;
   border: none;
-  padding: 12px 24px;
-  border-radius: 5px;
-  font-size: 1em;
+  border-radius: 6px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.2s;
 }
-
 #contact button:hover {
-  background-color: #e4d6c2;
+  background: #155cb0;
 }
