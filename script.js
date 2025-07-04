@@ -1,3 +1,4 @@
+// 1. Product data and dynamic rendering
 const jerseys = [
   {
     name: "Man United 2007/2008 (Away Kit)",
@@ -28,4 +29,41 @@ jerseys.forEach(jersey => {
     <button>Buy</button>
   `;
   container.appendChild(section);
+});
+
+// 2. Nav toggling logic
+document.addEventListener('DOMContentLoaded', function() {
+  const contactLink = document.getElementById('contact-link');
+  const homeLink = document.getElementById('home-link');
+  const shopLink = document.getElementById('shop-link');
+  const contactSection = document.getElementById('contact');
+  const productList = document.getElementById('product-list');
+
+  function showHome() {
+    contactSection.style.display = 'none';
+    productList.style.display = '';
+  }
+
+  function showContact() {
+    contactSection.style.display = '';
+    productList.style.display = 'none';
+  }
+
+  homeLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    showHome();
+  });
+
+  shopLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    showHome();
+  });
+
+  contactLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    showContact();
+  });
+
+  // Show home by default on page load
+  showHome();
 });
