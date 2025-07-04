@@ -1,19 +1,18 @@
 :root {
-  --gold: #cbb26a;
-  --gold-light: #ffd700;
-  --black: #111114;
-  --black-dark: #18181b;
-  --gray: #232325;
-  --white: #fafaf9;
+  --matte-black: #111111;
+  --matte-black-dark: #19191a;
+  --gold: #bfa14b;
+  --white: #fcfbf9;
+  --gray: #252525;
 }
 
-body {
+html, body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  font-family: 'Inter', Arial, sans-serif;
+  background: var(--matte-black);
   color: var(--white);
-  background: linear-gradient(180deg, var(--black) 0%, var(--black-dark) 100%);
+  font-family: 'Inter', Arial, sans-serif;
   letter-spacing: 0.01em;
 }
 
@@ -24,9 +23,8 @@ body {
 }
 
 header {
-  background: rgba(17, 17, 20, 0.98);
-  border-bottom: 1px solid var(--gray);
-  box-shadow: 0 2px 20px rgba(0,0,0,0.13);
+  background: var(--matte-black);
+  border-bottom: 2px solid var(--gold);
   padding-top: 2.5rem;
   padding-bottom: 2rem;
   text-align: center;
@@ -39,104 +37,162 @@ header {
   font-weight: 700;
   color: var(--gold);
   letter-spacing: 2px;
-  text-shadow: 0 2px 16px rgba(203,178,106,0.08);
+  text-shadow: none;
 }
 
 .tagline {
-  color: var(--gold-light);
+  color: var(--white);
   font-size: 1.08rem;
   font-style: italic;
   letter-spacing: 1px;
-  margin: 0.5rem 0 0 0;
+  margin: 0.4rem 0 0 0;
+  opacity: 0.7;
 }
 
-main {
+.shop-section {
   margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.8rem;
 }
 
-.hero {
-  background: rgba(35, 35, 37, 0.95);
-  border-radius: 18px;
-  box-shadow: 0 2px 18px rgba(0,0,0,0.21);
-  padding: 2.5rem 2rem;
-  text-align: center;
-  margin-bottom: 2.5rem;
-}
-
-.hero h2 {
-  color: var(--gold-light);
+.shop-section h2 {
+  color: var(--gold);
   font-family: 'Playfair Display', serif;
-  margin-top: 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  margin-bottom: 1.7rem;
   letter-spacing: 1px;
+  text-align: left;
+  border-left: 4px solid var(--gold);
+  padding-left: 0.7rem;
 }
 
-.hero p {
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.product-card {
+  background: var(--matte-black-dark);
+  border-radius: 12px;
+  box-shadow: none;
+  border: 1.5px solid var(--gray);
+  padding: 1.12rem 1rem 1.4rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: border 0.18s, transform 0.18s;
+  position: relative;
+}
+
+.product-card:hover {
+  border: 1.5px solid var(--gold);
+  transform: translateY(-3px) scale(1.01);
+}
+
+.product-card img {
+  width: 100%;
+  max-width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  background: #222;
+  box-shadow: none;
+}
+
+.product-card h3 {
+  font-size: 1.08rem;
+  margin: 0.4rem 0 0.2rem 0;
   color: var(--white);
-  font-size: 1.15rem;
-  margin-bottom: 0;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+.price {
+  font-size: 1.06rem;
+  color: var(--gold);
+  margin-bottom: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.order-btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--matte-black);
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 0.55rem 1.2rem;
+  font-size: 0.98rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: none;
+  font-family: inherit;
+}
+
+.order-btn:hover {
+  background: #f7e49b;
+  color: var(--matte-black-dark);
 }
 
 .contact-section {
-  margin: 0 auto;
+  margin: 2.5rem auto 0 auto;
   max-width: 420px;
-  background: rgba(35, 35, 37, 0.93);
-  border-radius: 14px;
-  box-shadow: 0 2px 14px rgba(0,0,0,0.15);
-  padding: 2.2rem 1.5rem 2.5rem 1.5rem;
+  background: var(--matte-black-dark);
+  border-radius: 10px;
+  border: 1.5px solid var(--gold);
+  padding: 1.5rem 1.5rem 2rem 1.5rem;
   text-align: center;
 }
 
 .contact-section h2 {
   color: var(--gold);
-  margin-top: 0;
   font-family: 'Playfair Display', serif;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   letter-spacing: 1px;
+  margin-top: 0;
+  margin-bottom: 0.7rem;
 }
 
 .contact-section p {
-  color: #eee;
+  color: #e5e5e5;
   margin-bottom: 1.3rem;
+  font-size: 1rem;
 }
 
 .fb-btn {
   display: inline-block;
-  background: #1877f3;
-  color: #fff;
-  font-size: 1.08rem;
+  background: var(--gold);
+  color: var(--matte-black);
+  font-size: 1.05rem;
   font-weight: 600;
   padding: 0.8rem 1.6rem;
   border-radius: 8px;
   text-decoration: none;
   transition: background 0.2s;
-  box-shadow: 0 1px 6px rgba(24,119,243,0.12);
+  border: none;
+  box-shadow: none;
   letter-spacing: 0.5px;
   margin-top: 0.5rem;
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: inherit;
 }
 
 .fb-btn:hover {
-  background: #145db2;
+  background: #f7e49b;
+  color: var(--matte-black);
 }
-
-.fb-icon {
-  font-family: "FontAwesome";
-  margin-right: 0.7em;
-  font-style: normal;
-}
-
-/* FontAwesome Facebook icon support */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
 footer {
   text-align: center;
   padding: 1.3rem 0;
   font-size: 1rem;
-  color: #7a7a7a;
-  background: rgba(17, 17, 19, 0.97);
-  border-top: 1px solid var(--gray);
+  color: #a99c7e;
+  background: var(--matte-black);
+  border-top: 2px solid var(--gold);
   letter-spacing: 0.5px;
   z-index: 1;
   position: relative;
@@ -147,10 +203,14 @@ footer {
   .container {
     padding: 0 0.5rem;
   }
-  .hero, .contact-section {
-    padding: 1.5rem 0.7rem;
+  .shop-section h2 {
+    font-size: 1.1rem;
+    padding-left: 0.4rem;
+  }
+  .products-grid {
+    grid-template-columns: 1fr;
   }
   .logo {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
