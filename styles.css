@@ -1,84 +1,142 @@
-body {
-  margin: 0;
-  min-height: 100vh;
-  color: #fafaf9;
-  font-family: 'Segoe UI', 'Arial', sans-serif;
-  background:
-    linear-gradient(135deg, #18181b 0%, #232325 100%),
-    url('https://www.transparenttextures.com/patterns/black-linen.png');
-  background-blend-mode: overlay;
-  position: relative;
+:root {
+  --gold: #cbb26a;
+  --gold-light: #ffd700;
+  --black: #111114;
+  --black-dark: #18181b;
+  --gray: #232325;
+  --white: #fafaf9;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(120deg, rgba(38, 38, 43, 0.8) 0%, rgba(24, 24, 27, 0.92) 100%);
-  z-index: 0;
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Inter', Arial, sans-serif;
+  color: var(--white);
+  background: linear-gradient(180deg, var(--black) 0%, var(--black-dark) 100%);
+  letter-spacing: 0.01em;
+}
+
+.container {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 header {
+  background: rgba(17, 17, 20, 0.98);
+  border-bottom: 1px solid var(--gray);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.13);
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
   text-align: center;
-  padding: 2rem 0 1rem 0;
-  background: rgba(17, 17, 19, 0.98);
-  border-bottom: 1px solid #232325;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
 }
 
-header h1 {
+.logo {
   margin: 0;
-  font-size: 2.7rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: #fff;
-  text-shadow: 0 2px 12px rgba(60, 60, 66, 0.18);
   font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 2px;
+  text-shadow: 0 2px 16px rgba(203,178,106,0.08);
 }
 
 .tagline {
+  color: var(--gold-light);
   font-size: 1.08rem;
-  color: #cbb26a;
   font-style: italic;
   letter-spacing: 1px;
-  margin-top: 0.5rem;
+  margin: 0.5rem 0 0 0;
 }
 
 main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 3rem 1rem;
-  z-index: 1;
-  position: relative;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
-.intro {
-  background: rgba(35, 35, 37, 0.97);
+.hero {
+  background: rgba(35, 35, 37, 0.95);
   border-radius: 18px;
   box-shadow: 0 2px 18px rgba(0,0,0,0.21);
-  padding: 2rem 3rem;
-  margin-bottom: 2rem;
+  padding: 2.5rem 2rem;
   text-align: center;
-  max-width: 480px;
+  margin-bottom: 2.5rem;
 }
 
-.intro h2 {
-  color: #ffd700;
+.hero h2 {
+  color: var(--gold-light);
+  font-family: 'Playfair Display', serif;
+  margin-top: 0;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  color: var(--white);
+  font-size: 1.15rem;
+  margin-bottom: 0;
+}
+
+.contact-section {
+  margin: 0 auto;
+  max-width: 420px;
+  background: rgba(35, 35, 37, 0.93);
+  border-radius: 14px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.15);
+  padding: 2.2rem 1.5rem 2.5rem 1.5rem;
+  text-align: center;
+}
+
+.contact-section h2 {
+  color: var(--gold);
   margin-top: 0;
   font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
 }
+
+.contact-section p {
+  color: #eee;
+  margin-bottom: 1.3rem;
+}
+
+.fb-btn {
+  display: inline-block;
+  background: #1877f3;
+  color: #fff;
+  font-size: 1.08rem;
+  font-weight: 600;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s;
+  box-shadow: 0 1px 6px rgba(24,119,243,0.12);
+  letter-spacing: 0.5px;
+  margin-top: 0.5rem;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.fb-btn:hover {
+  background: #145db2;
+}
+
+.fb-icon {
+  font-family: "FontAwesome";
+  margin-right: 0.7em;
+  font-style: normal;
+}
+
+/* FontAwesome Facebook icon support */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
 footer {
   text-align: center;
-  padding: 1.2rem 0;
-  font-size: 0.98rem;
+  padding: 1.3rem 0;
+  font-size: 1rem;
   color: #7a7a7a;
   background: rgba(17, 17, 19, 0.97);
-  border-top: 1px solid #232325;
+  border-top: 1px solid var(--gray);
   letter-spacing: 0.5px;
   z-index: 1;
   position: relative;
@@ -86,16 +144,13 @@ footer {
 
 /* Responsive tweaks */
 @media (max-width: 700px) {
-  header {
-    padding: 1.4rem 0 0.7rem 0;
+  .container {
+    padding: 0 0.5rem;
   }
-  main {
-    padding: 2rem 0.5rem;
+  .hero, .contact-section {
+    padding: 1.5rem 0.7rem;
   }
-  .intro {
-    padding: 1.5rem 1rem;
-  }
-  header h1 {
-    font-size: 2.0rem;
+  .logo {
+    font-size: 2rem;
   }
 }
