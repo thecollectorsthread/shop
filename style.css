@@ -1,86 +1,31 @@
-body {
-  background-color: #1a1a1a;
-  background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
-  font-family: 'Playfair Display', serif;
-  color: #f1ece3;
-  margin: 0;
-  padding: 0;
-}
+const jerseys = [
+  {
+    name: "Man United 2007/2008 (Away Kit)",
+    price: "600 BDT",
+    image: "images/manu2007_8away.jpg"
+  },
+  {
+    name: "Brazil 2002 Champion Kit",
+    price: "550 BDT",
+    image: "images/brazil2002.jpg"
+  },
+  {
+    name: "AC Milan 2006 Home Kit",
+    price: "580 BDT",
+    image: "images/milan2006.jpg"
+  }
+];
 
-header, footer {
-  text-align: center;
-  padding: 20px;
-}
+const container = document.getElementById('product-list');
 
-nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #f1ece3;
-}
-
-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px;
-}
-
-.product {
-  background: #2b2b2b;
-  margin: 15px;
-  padding: 15px;
-  border-radius: 8px;
-  width: 200px;
-  text-align: center;
-}
-
-.product img {
-  width: 100%;
-  border-radius: 5px;
-}
-
-button {
-  margin-top: 10px;
-  padding: 8px 12px;
-  background: #f1ece3;
-  border: none;
-  color: #1a1a1a;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-button:hover {
-  background: #e5d9ca;
-}
-
-/* Contact Section */
-#contact {
-  text-align: center;
-  padding: 40px 20px;
-}
-
-#contact h2 {
-  color: #f1ece3;
-  font-size: 1.8em;
-  margin-bottom: 10px;
-}
-
-#contact p {
-  color: #d0c9bf;
-  margin-bottom: 20px;
-}
-
-#contact button {
-  background-color: #f1ece3;
-  color: #1a1a1a;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 5px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-#contact button:hover {
-  background-color: #e4d6c2;
-}
+jerseys.forEach(jersey => {
+  const section = document.createElement('section');
+  section.className = 'product';
+  section.innerHTML = `
+    <img src="${jersey.image}" alt="${jersey.name}" />
+    <h2>${jersey.name}</h2>
+    <p>${jersey.price}</p>
+    <button>Buy</button>
+  `;
+  container.appendChild(section);
+});
