@@ -4,6 +4,7 @@ body {
   font-family: 'Playfair Display', serif;
   color: #f1ece3;
   margin: 0;
+  padding: 0;
 }
 
 header, footer {
@@ -19,8 +20,8 @@ nav a {
 
 main {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   padding: 20px;
 }
 
