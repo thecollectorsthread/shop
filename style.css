@@ -1,76 +1,86 @@
 body {
+  background-color: #1a1a1a;
+  background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
   font-family: 'Playfair Display', serif;
+  color: #f1ece3;
   margin: 0;
   padding: 0;
-  background: #fafafa;
 }
 
-header {
-  background: #222;
-  color: #fff;
-  padding: 25px 0 10px 0;
+header, footer {
   text-align: center;
-}
-
-nav {
-  margin: 15px 0;
+  padding: 20px;
 }
 
 nav a {
-  color: #fff;
+  margin: 0 10px;
   text-decoration: none;
-  margin: 0 18px;
-  font-size: 1.1rem;
-  transition: color 0.2s;
+  color: #f1ece3;
 }
 
-nav a:hover {
-  color: #f0c040;
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
 }
 
-main#product-list {
-  min-height: 300px;
-  padding: 30px 10px;
-}
-
-#contact {
-  max-width: 400px;
-  margin: 40px auto 0 auto;
-  padding: 30px 20px;
-  background: #f7f7f7;
-  border-radius: 12px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+.product {
+  background: #2b2b2b;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  width: 200px;
   text-align: center;
-  display: none; /* Hide by default */
+}
+
+.product img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: #f1ece3;
+  border: none;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #e5d9ca;
+}
+
+/* Contact Section */
+#contact {
+  text-align: center;
+  padding: 40px 20px;
 }
 
 #contact h2 {
+  color: #f1ece3;
+  font-size: 1.8em;
   margin-bottom: 10px;
 }
 
 #contact p {
-  margin-bottom: 18px;
-  color: #333;
+  color: #d0c9bf;
+  margin-bottom: 20px;
 }
 
 #contact button {
-  background: #1877f2;
-  color: #fff;
-  padding: 12px 28px;
+  background-color: #f1ece3;
+  color: #1a1a1a;
   border: none;
-  border-radius: 6px;
-  font-size: 1rem;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 1em;
   cursor: pointer;
-  transition: background 0.2s;
-}
-#contact button:hover {
-  background: #155cb0;
+  transition: background 0.3s ease;
 }
 
-footer {
-  background: #222;
-  color: #fff;
-  text-align: center;
-  padding: 18px 0;
-  margin-top: 40px;
+#contact button:hover {
+  background-color: #e4d6c2;
 }
